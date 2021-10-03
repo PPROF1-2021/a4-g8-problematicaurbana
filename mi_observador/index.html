@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/logo1.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>MiObservador</title>
+
+    <!--Agregue etiquetas meta descriptivas, sirven para el SEO (posicionamiento del sitio en buscadores)
+    cada etiqueta de este tipo debe aclarar que hace esta seccion del sitio, como este es el inicio(index)
+    solo basta con dar un pantallazo general del proyecto, en las demas paginas hago lo mismo pero con una descripcion
+    particular para cada caso-->
+    <meta name="description" content="Sitio Web sobre un proyecto orientado al monitoreo sobre problematicas urbanas.">
+
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.png" class="logo">
+    </header>
+
+    <nav class="menu">
+
+        <ul id="lista_menu">
+
+            <li id="menu"><a href="./index.html">Inicio</a></li>
+            <li id="menu"><a href="">Quienes somos</a></li>
+            <li id="menu"><a href="./carga_datos.html">Reportes</a></li>
+            <li id="menu" style="float:right"><a href="#"
+                    onclick="window.open('./login.html' ,'ventana','width=640,height=480,scrollbars=NO, menubar=NO,resizable=NO,titlebar=NO,status=NO')">Login</a>
+            </li>
+            <li id="menu" style="float:right"><a href="#"
+                    onclick="window.open('./formulario.html' ,'ventana','width=640,height=480,scrollbars=NO, menubar=NO,resizable=NO,titlebar=NO,status=NO')">Registrarse</a>
+            </li>
+        </ul>
+
+        <img src="./images/index_portada.jpg" class="imagen-portada">
+
+    </nav>
+
+    <!--Salvador: A la tabla le faltaba una etiqueta <td> en que cada fila, cambie imagenes y puse info,
+        mucho CSS de la tabla no se estaba usando asi que saque varios valores.-->
+
+    <table id="tabla1">
+
+
+        <tr>
+            <td><img src="./images/imagen-desarrollo.jpg" class="imagenes"></td>
+            <td>Este proyecto esta en pleno desarrollo, mientras puede ir explorando el sitio. 😉
+            </td>
+        </tr>
+
+        <tr>
+            <td><img src="./images/base-de-datos.jpg" class="imagenes"></td>
+            <td>Uno de nuestros tantos obejtivos es sumar a fin de año una Base de Datos, lo cual
+                potenciara esta gran idea. 📈📈
+            </td>
+        </tr>
+
+        <tr>
+            <td><img src="./images/imagen3.jpg" class="imagenes"></td>
+            <td>Ahora mismo tenemos pensado trabajar con 3 tipos de reportes, puede que en un futuro
+                agreguemos mas. 📊📊
+            </td>
+        </tr>
+
+    </table>
+
+
+
+    <footer class="footer">
+
+        <p class="texto-footer">❤ Todos los derechos reservados. Copyright&copy 2021 Grupo 8 Programacion Web 1 ❤</p>
+
+    </footer>
+
+</body>
+
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/logo1.ico" />
+  <link rel="stylesheet" href="css/login.css" />
+  <title>Ingresá</title>
+  <meta name="description" content="Seccion login, si el usuario tiene ya una cuenta puede ingresar por esta pagina.">
+
+</head>
+
+<body>
+
+  <!--NavBar agregado por FeRnAnDo-->
+  <nav class="menu">
+
+    <ul id="lista_menu">
+      <li id="menu"><a href="./index.html">Inicio</a></li>
+      <li id="menu"><a href="">Quienes somos</a></li>
+      <li id="menu"><a href="./carga_datos.html">Reportes</a></li>
+      <li id="menu" style="float:right"><a href="#"
+          onclick="window.open('./login.html' ,'ventana','width=640,height=480,scrollbars=NO, menubar=NO,resizable=NO,titlebar=NO,status=NO')">Login</a>
+      </li>
+      <li id="menu" style="float:right"><a href="#"
+          onclick="window.open('./formulario.html' ,'ventana','width=640,height=480,scrollbars=NO, menubar=NO,resizable=NO,titlebar=NO,status=NO')">Registrarse</a>
+      </li>
+    </ul>
+    <img src="./images/index_portada.jpg" class="imagen-portada">
+  </nav>
+
+
+  <div id="login">
+
+    <h2>LOGIN</h2>
+    <h3>Por favor, inicie sesión</h3>
+
+    <form id="login_form" method="POST" action="misitio" class="formulario">
+
+      <!--Saque varios <br> que habia para hacer saltos de linea y los hice con CSS-->
+
+      <label for="login_email">E-Mail:</label>
+      <input type="text" name="login_email" id="login_email" placeholder="Ingrese correo electrónico" required>
+
+
+      <label for="login_password">Contraseña: </label>
+      <input type="login_password" name="login_password" id="login_password" placeholder="Ingrese contraseña"
+        minlength="6" maxlength="8" required>
+
+
+      <!--Ingreso agregado por FeRnAnDo-->
+
+      <button onclick="window.location.href='./formulario.html'" class="botones">Ingresar</button>
+
+      <!--Juan : agregué esto para cumplir con consigna de Actividad-->
+      <h4>Si no está registrado, haga clic en el botón <em>registrarse</em></h4>
+
+      <!--Cambios los "botones" hechos con inputs por etiquetas button-->
+      <button value="Registrarse" onclick="window.location.href='./formulario.html'"
+        class="botones">Registrarse</button>
+      <button name="login_salir" value="Cerrar" onclick="window.close()" class="botones">Cerrar</button>
+
+
+    </form>
+
+  </div>
+
+  <!-- Agregado por Salvador-->
+  <footer class="footer">
+
+    <p class="texto-footer">❤ Todos los derechos reservados. Copyright&copy 2021 Grupo 8 Programacion Web 1 ❤</p>
+
+  </footer>
+
+
+</body>
+
+
+</html>
