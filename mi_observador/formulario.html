@@ -14,23 +14,7 @@
 </head>
 
 <body>
-  <!--NavBar agregado por FeRnAnDo-->
-  <nav class="menu">
-
-    <ul id="lista_menu">
-      <li id="menu"><a href="./index.html">Inicio</a></li>
-      <li id="menu"><a href="">Quienes somos</a></li>
-      <li id="menu"><a href="./carga_datos.html">Reportes</a></li>
-      <li id="menu" style="float:right"><a href="#"
-          onclick="window.open('./login.html' ,'ventana','width=640,height=480,scrollbars=NO, menubar=NO,resizable=NO,titlebar=NO,status=NO')">Login</a>
-      </li>
-      <li id="menu" style="float:right"><a href="#"
-          onclick="window.open('./formulario.html' ,'ventana','width=640,height=480,scrollbars=NO, menubar=NO,resizable=NO,titlebar=NO,status=NO')">Registrarse</a>
-      </li>
-    </ul>
-    <img src="./images/index_portada.jpg" class="imagen-portada">
-  </nav>
-
+  
   <div id="registro">
 
     <h2>Formulario de REGISTRO</h2>
@@ -44,6 +28,13 @@
       <label for="register_apellido">Apellido/s:</label>
       <input type="text" name="register_apellido" id="register_apellido" placeholder="Ingrese Apellido" required>
 
+      <label for="register_apellido">Ciudad:</label>
+      <input type="text" name="register_ciudad" id="register_ciudad" placeholder="Ingrese Ciudad" required>
+
+      <label for="register_apellido">Provincia:</label>
+      <input type="text" name="register_provinicia" id="register_provincia" placeholder="Ingrese Provincia" required>
+
+
       <label for="register_email">Correo Electrónico:</label>
       <input type="email" name="register_email" id="register_email" placeholder="Ingrese E-Mail" required>
 
@@ -56,18 +47,14 @@
 
 
       <!--Corregi los "botones", estaban hechos con inputs, solo los reemplaze con etiquetas button-->
-      <button type="submit" name="register_enviar" id="register_enviar" class="botones">Enviar</button>
-      <button name="register_salir" onclick="window.close()" class="botones">Cerrar</button>
+      <button type="submit" name="register_enviar" id="register_enviar" class="botones" onclick="location.href='carga_datos'" >Enviar</button>
+      <button name="register_salir" onclick="window.close()" class="botones">Cerrar</button> 
 
     </form>
 
   </div>
 
-  <footer class="footer">
-
-    <p class="texto-footer">❤ Todos los derechos reservados. Copyright&copy 2021 Grupo 8 Programacion Web 1 ❤</p>
-
-  </footer>
+  
 
 </body>
 

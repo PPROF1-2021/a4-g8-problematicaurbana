@@ -8,74 +8,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/logo1.ico" />
   <link rel="stylesheet" href="css/login.css" />
-  <title>Ingresá</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Ingresa</title>
   <meta name="description" content="Seccion login, si el usuario tiene ya una cuenta puede ingresar por esta pagina.">
 
 </head>
 
 <body>
+  <div class="container-fluid">
+    <div class="row align-items-center LoginGeneral">
+      <h1>Le damos la Bienvenida</h1>
+      <div class="col-xl-3"></div>
+    </div>
+    <div class="container containerLogin">
+       <div class="row align-items-center LoginCuentas"> 
+          <div class="col">        
+             
+    <div class="Login">
+       <h3>Ingrese sus datos</h3>
+        <form id="frm-login" name="frm-login" method="post">
 
-  <!--NavBar agregado por FeRnAnDo-->
-  <nav class="menu">
+          <div class="d-grid align-items-center">
+            <p>Correo Electrónico:</p>
+            <input type="email" class="form-control" name="login_email" placeholder="Ingrese correo electrónico" required>
+          </div>         
+          <p>Contraseña:</p>
+          <div class="d-grid">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
+            <a href="RecuperaPassword" class="linkPassword">Olvidé mi contraseña</a>
+          </div>
 
-    <ul id="lista_menu">
-      <li id="menu"><a href="./index.html">Inicio</a></li>
-      <li id="menu"><a href="">Quienes somos</a></li>
-      <li id="menu"><a href="./carga_datos.html">Reportes</a></li>
-      <li id="menu" style="float:right"><a href="#"
-          onclick="window.open('./login.html' ,'ventana','width=640,height=480,scrollbars=NO, menubar=NO,resizable=NO,titlebar=NO,status=NO')">Login</a>
-      </li>
-      <li id="menu" style="float:right"><a href="#"
-          onclick="window.open('./formulario.html' ,'ventana','width=640,height=480,scrollbars=NO, menubar=NO,resizable=NO,titlebar=NO,status=NO')">Registrarse</a>
-      </li>
-    </ul>
-    <img src="./images/index_portada.jpg" class="imagen-portada">
-  </nav>
+            <div class="d-grid">           
+            <button type="submit" id="btn-login" class="btn btn-login">Iniciar sesión</button>
+            </div> 
 
-
-  <div id="login">
-
-    <h2>LOGIN</h2>
-    <h3>Por favor, inicie sesión</h3>
-
-    <form id="login_form" method="POST" action="misitio" class="formulario">
-
-      <!--Saque varios <br> que habia para hacer saltos de linea y los hice con CSS-->
-
-      <label for="login_email">E-Mail:</label>
-      <input type="text" name="login_email" id="login_email" placeholder="Ingrese correo electrónico" required>
-
-
-      <label for="login_password">Contraseña: </label>
-      <input type="login_password" name="login_password" id="login_password" placeholder="Ingrese contraseña"
-        minlength="6" maxlength="8" required>
-
-
-      <!--Ingreso agregado por FeRnAnDo-->
-
-      <button onclick="window.location.href='./formulario.html'" class="botones">Ingresar</button>
-
-      <!--Juan : agregué esto para cumplir con consigna de Actividad-->
-      <h4>Si no está registrado, haga clic en el botón <em>registrarse</em></h4>
-
-      <!--Cambios los "botones" hechos con inputs por etiquetas button-->
-      <button value="Registrarse" onclick="window.location.href='./formulario.html'"
-        class="botones">Registrarse</button>
-      <button name="login_salir" value="Cerrar" onclick="window.close()" class="botones">Cerrar</button>
-
-
-    </form>
+            <div class="container w-100 my-3">
+              <div class="row text-center">
+                <div class="col-12">Iniciar sesión con otra cuenta</div>
+              </div>
+              <div class="row">
+                <button class="btn btn-outline-primary w-100 my-1">
+                  <div class="row align-items-center">
+                      <div class="col-2">
+                        <img src="images/facebook.ico" width="30" alt="">
+                      </div>
+                      <div class="col-8 text-center">Facebook</div>
+                  </div>
+                </button>
+    
+              </div>
+              <div class="row">
+                <button class="btn btn-outline-danger w-100 my-1">
+                  <div class="row align-items-center">
+                      <div class="col-2">
+                        <img src="images/google.ico" width="30" alt="">
+                      </div>
+                      <div class="col-8 text-center">Google</div>
+                  </div>
+                </button>
+    
+              </div>
+           </div>
+             <input type="hidden" name="actions" id="actions" value="log">
+       <input type="hidden" name="qry" id="qry" value="">
+        
+       <p class="mt-3">o <a href="formulario.html">Crear una cuenta</a></p>
+           
+      </form>
+             
+    </div>
 
   </div>
-
-  <!-- Agregado por Salvador-->
-  <footer class="footer">
-
-    <p class="texto-footer">❤ Todos los derechos reservados. Copyright&copy 2021 Grupo 8 Programacion Web 1 ❤</p>
-
-  </footer>
-
-
+</div>
+</div>
+</div>         
+   
 </body>
 
 
