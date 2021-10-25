@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/logo1.ico" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
   <link rel="stylesheet" href="css/login.css" />
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <title>Ingresa</title>
@@ -15,36 +15,110 @@
 </head>
 
 <body>
+  <header id="cabecera" class="header">
+    <img src="images/logo.png" class="logo img-fluid" alt="Logo">
+</header>
+<!--Barra de navegación-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navegacion">
+    <div class="container-fluid" id="contendor-navegacion">
+        <a class="navbar-brand" href="#">
+            <img src="./images/Pack_Iconos/eye-scanner.png" alt="Icono Navegacion" width="40" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./Sobre_nosotros.html">Quienes Somos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./carga_datos.html">Reportes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./login.html">Login</a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="./formulario.html">Registrarse</a>
+      </li>
+    </ul>
+
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Escriba aqui" aria-label="Search">
+        <button class="btn btn-outline-warning" type="submit">Buscar</button>
+    </form>
+  </div>
+</div>
+</nav>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./Sobre_nosotros.html">Quienes Somos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./carga_datos.html">Reportes</a>
+        </li>
+        <li class="nav-item"><a href="./login.html">Login</a>
+        </li>
+        <li class="nav-item"><a href="./formulario.html">Registrarse</a>
+        </li>
+    </ul>
+
+   	
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Escriba aqui" aria-label="Search">
+        <button class="btn btn-outline-warning" type="submit">Buscar</button>
+    </form>
+  </div>
+
+  <!--Sección Login-->
+  <div class="boxLogin">
+  <div class="container containerLogin">
+  
   <div class="container-fluid">
-    <div class="row align-items-center LoginGeneral">
+    <div class="row LoginGeneral">
       <h1>Le damos la Bienvenida</h1>
       <div class="col-xl-3"></div>
     </div>
-    <div class="container containerLogin">
-       <div class="row align-items-center LoginCuentas"> 
+
+       <div class="row LoginCuentas"> 
           <div class="col">        
              
-    <div class="Login">
-       <h3>Ingrese sus datos</h3>
-        <form id="frm-login" name="frm-login" method="post">
-
+          <div class="Login">
+           <h3>Ingrese sus datos</h3>
+           <form id="frm-login" name="frm-login" method="post">
+           </div>
+            
           <div class="d-grid align-items-center">
-            <p>Correo Electrónico:</p>
-            <input type="email" class="form-control" name="login_email" placeholder="Ingrese correo electrónico" required>
-          </div>         
-          <p>Contraseña:</p>
+              <h6>Correo Electrónico *</h6>
+              <input type="email" class="form-control sPadingF" id="email" name="email" placeholder="Ingrese correo electrónico" data-rule-email="true" required>
+              
+          </div>      
           <div class="d-grid">
-            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
+            <h6>Contraseña *</h6>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese contraseña" required>
             <a href="RecuperaPassword" class="linkPassword">Olvidé mi contraseña</a>
           </div>
 
             <div class="d-grid">           
-            <button type="submit" id="btn-login" class="btn btn-login">Iniciar sesión</button>
+            <button type="submit" id="btn-login" class="btn btn-login" onclick="location.href='carga_datos.html'">Iniciar sesión</button>
             </div> 
 
             <div class="container w-100 my-3">
               <div class="row text-center">
-                <div class="col-12">Iniciar sesión con otra cuenta</div>
+                <div class="col-12"></div></i>Iniciar sesión con otra cuenta</div>
               </div>
               <div class="row">
                 <button class="btn btn-outline-primary w-100 my-1">
@@ -81,8 +155,9 @@
   </div>
 </div>
 </div>
-</div>         
-   
+</div> 
+</div>        
+
 </body>
 
 
