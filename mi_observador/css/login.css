@@ -1,24 +1,25 @@
-.formulario {
-  background-color: rgba(212, 204, 204, 0.918);
-  border-width: 1em;
-  /*margin: 0 auto;
-  width: 30em;
-  text-align: center;*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-label {
+header{
+  color: gainsboro;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8em;
-  margin: 20px auto;
-  display: inline-table;
-  text-align: right;
-  width: 150px;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
 }
 
-.btn-login {
+#btn-login {
    font-weight: bold;
-   border-width: 5px;
+   border-width: 1px;
+   font-size:150%;
+   border-color: rgb(18, 0, 122);
+
  }
 
 button:hover {
@@ -44,6 +45,11 @@ h2 {
   text-align: center;
   
   
+}
+
+.logo {
+  display:block;
+  margin: 10px auto;       
 }
 
 h3 {
@@ -80,30 +86,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   text-align: center;
 }
 
-/*Se agrega NavBar . FeRnAnDo*/
-#lista_menu{
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
-  background-color: #FFAA00;
-}
-
-#menu{
-  float: left;
-  
-}
-
-#menu a{
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-
 
 
 /* font family: Fernando*/
@@ -120,8 +102,3 @@ a:hover {
   background-color: #FDEBD0;
 }
 
-.imagen-portada {
-  max-width: 100%;
-  height: auto;
-  margin-top: 20px;
-}
