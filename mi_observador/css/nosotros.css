@@ -19,9 +19,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     text-align:center;
     border: 3px rgb(255, 106, 0) outset;
     margin: 50px;
-    padding: 5px 10px 5px;
-    height: 30px;
-    max-width: 1080px;
 }
 
 .texto{
@@ -32,14 +29,62 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 div img{
+    margin: 0 10px;
+    width: 40px;
     height: 40px;
+    line-height: 20px;
     background-color: #EEE;
     display:inline-flex;
     justify-content: center;
     align-items: center;
 }
 
-footer {
-background-color:bisque;
-margin-top:50px;
+.bi-instagram{
+    background: #ffcfe9;
+    font-size: 40px;
+    color:rgb(234, 0, 255);
 }
+
+.bi-twitter{
+    background: #dbefff;
+    font-size: 40px;
+    color:rgb(41, 158, 255);
+}
+.bi-whatsapp{
+    background: #aaffa2;
+    font-size: 40px;
+    color:rgb(27, 167, 57);
+}
+.bi-facebook{
+    background: hsl(221, 100%, 90%);
+    font-size: 40px;
+    color:rgb(0, 47, 255)
+}
+
+.bi-google{
+    background: hsl(0, 100%, 74%);
+    font-size: 40px;
+    color:rgb(255, 0, 0)
+}
+
+.social-bar{
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+}
+
+.social-bar a {
+    display: block;
+    text-align: center;
+    padding: 10x;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+
+  .social-bar a:hover {
+    background-color: rgb(255, 236, 149);
+  }
