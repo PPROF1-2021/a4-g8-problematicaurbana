@@ -18,6 +18,12 @@
     </script>
 
     <title>Mi Observador</title>
+    <!--Enlace libreria SweetAlert para mejorar las alertas del sitio-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--Enlace al js-->
+    <script src="js/alertas_carga_datos.js"></script>
+
     <meta name="keywords" content="Cordoba, Capital, Urbano, Problematica, Aplicacion, Web, Observador, Movil">
     <meta name="description"
         content="Sitio Web de un proyecto orientado al monitoreo sobre Problematicas Urbanas en Cordoba Capital">
@@ -27,7 +33,7 @@
     <header id="cabecera" class="header">
         <img src="images/logo.png" class="logo img-fluid" alt="Logo">
     </header>
-   <!--Barra de Navegacióno con menú-->
+    <!--Barra de Navegacióno con menú-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navegacion">
         <div class="container-fluid" id="contendor-navegacion">
             <a class="navbar-brand" href="#">
@@ -52,9 +58,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./login.html">Login</a>
-                     </li>
-                     <li class="nav-item">
-                         <a class="nav-link" href="./formulario.html">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./formulario.html">Registrarse</a>
                     </li>
 
                 </ul>
@@ -65,42 +71,48 @@
             </div>
         </div>
     </nav>
-<!--Contenido de Carga de datos-->
-<div class="container contenedor-principal border border-3" id="contenedor-principal">
-    <div class="row d-flex justify-content-center h-100">
-  
-        <div class="card" id="encabezadoLogin">
-          <div class="card-header">
-          <h1>Reporte de incidente</h1>
-          </div>
-          </div>
-       <form>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Accidente Vial</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Reparación</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-            <label class="form-check-label" for="inlineRadio3">Manifestación</label>
-          </div>
-       </form>
 
-       <p><b>Ingrese la ubicacion del reporte en el mapa.</b></p>
+    <!--Contenido de Carga de datos-->
+    <div class="container contenedor-principal border border-3" id="contenedor-principal">
+        <div class="row d-flex justify-content-center h-100">
 
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217893.00024305488!2d-64.33648905211236!3d-31.42574742052076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1631044981787!5m2!1ses-419!2sar"
-            width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" class="mapa"></iframe>
+            <div class="card" id="encabezadoLogin">
+                <div class="card-header">
+                    <h1>Reporte de incidente</h1>
+                </div>
+            </div>
+            <form method="GET" action="#" class="d-flex justify-content-center">
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1" required>
+                    <label class="form-check-label" for="inlineRadio1">Accidente Vial</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2" required>
+                    <label class="form-check-label" for="inlineRadio2">Reparación</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                        value="option3" required>
+                    <label class="form-check-label" for="inlineRadio3">Manifestación</label>
+                </div>
+                <button type="reset" class="btn btn-warning" onclick="mostrarAlerta()">Enviar</button>
 
-    </div>
+            </form>
 
-    <footer class="footer container-fluid" id="footer">
-        <p class="texto-footer">❤ Todos los derechos reservados. Copyright&copy 2021
-            Grupo-8 Programacion-Web-1 <a href="https://www.ispc.edu.ar/" target="blank">ISPC</a>❤
-        </p>
-    </footer>
+            <p><b>Ingrese la ubicacion del reporte en el mapa.</b></p>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217893.00024305488!2d-64.33648905211236!3d-31.42574742052076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1631044981787!5m2!1ses-419!2sar"
+                width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" class="mapa"></iframe>
+
+        </div>
+
+        <footer class="footer container-fluid" id="footer">
+            <p class="texto-footer">❤ Todos los derechos reservados. Copyright&copy 2021
+                Grupo-8 Programacion-Web-1 <a href="https://www.ispc.edu.ar/" target="blank">ISPC</a>❤
+            </p>
+        </footer>
 
 </body>
