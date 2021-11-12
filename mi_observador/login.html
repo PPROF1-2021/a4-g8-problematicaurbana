@@ -68,8 +68,8 @@
   </nav>
 
   <!--Sección Login-->
-  <div class="container contenedor-principal border border-3" id="contenedor-principal">
-    <div class="row d-flex justify-content-center h-100">
+  <div class="container py-5" id="contenedor-principal"></div>
+    <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto">
 
       <div class="card" id="encabezadoLogin">
         <div class="card-header">
@@ -78,25 +78,32 @@
       </div>
 
 
-      <form>
+      <form id="login" class="needs-validation" method="post" novalidate>
         <!--Ingreso de Email -->
         <div class="form-outline mb-4">
           <h6>Correo Electrónico *</h6>
-          <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese correo electrónico"
-            data-rule-email="true" required>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese correo electrónico" required>
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
         </div>
 
         <!--Ingreso de Password -->
         <div class="form-outline mb-4">
           <h6>Contraseña *</h6>
-          <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese contraseña"
-            required>
+          <div class="form-row">
+           <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese contraseña" required>
+           <button class="btn btn-primary" type="button" onclick="verPassword()">Ver</button> 
+           <div class="valid-feedback"></div>
+            <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
+          </div>
+           
+          
           <a href="RecuperaPassword.html" class="linkPassword">Olvidé mi contraseña</a>
         </div>
 
         <div class="d-grid">
-          <button type="submit" id="btn-login" class="btn btn-login" onclick="location.href='carga_datos.html'">Iniciar
-            sesión</button>
+          <button type="submit" id="btn-login" class="btn btn-login">Iniciar sesión</button>
+          <!--onclick="location.href='carga_datos.html'"-->
         </div>
 
         <!--Seccion de login con otra cuenta -->
@@ -111,7 +118,7 @@
                     <div class="col-2">
                       <img src="images/facebook.ico" width="30" alt="">
                     </div>
-                    <div class="col-8 text-center">Facebook</div>
+                    <div class="col-8 text-center">Iniciar sesión con Facebook</div>
                   </div>
                 </button>
 
@@ -122,7 +129,7 @@
                     <div class="col-2">
                       <img src="images/google.ico" width="30" alt="">
                     </div>
-                    <div class="col-8 text-center">Google</div>
+                    <div class="col-8 text-center">Iniciar sesión con Google</div>
                   </div>
                 </button>
 
@@ -145,6 +152,9 @@
       Grupo-8 Programacion-Web-1 <a href="https://www.ispc.edu.ar/" target="blank">ISPC</a>❤
     </p>
   </footer>
+
+  <script src="js/validar_formulario.js"></script> 
+
 </body>
 
 </html>
