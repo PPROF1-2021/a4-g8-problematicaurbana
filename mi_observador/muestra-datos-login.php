@@ -25,7 +25,7 @@ if (!$con) {
 }
 
 $db = mysqli_select_db($con, $basededatos) or die ("Uh! no se ha podido conectar a la bdd");
-$consulta = "SELECT FROM cuenta WHERE email = $email AND contrasenia = $password";
+$consulta = "SELECT * FROM cuenta WHERE email = $email AND contrasenia = $password";
 
 if (mysqli_query ($con, $consulta)) {
     echo "<p> Inicio de sesion erroneo. </p>"
