@@ -70,87 +70,118 @@
   <!--Contenido página registro-->
 
   </div>
-  <div class="container contenedor-principal border border-3" id="contenedor-principal">
-    <div class="row d-flex justify-content-center h-100">
-
-      <div class="card" id="encabezadoLogin">
+  <div class="container py-5" id="contenedor-principal">
+    <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto">
+      <div class="card" id="encabezadoRegistro">
         <div class="card-header">
           <h1>Formulario de registro</h1>
           <h3>Por favor, complete con sus datos</h3>
         </div>
       </div>
-
-      <form>
+      
+      <!--Se agrega validación al form con boostrap y js   data-rule-required="true"-->
+    <form id="registro" class="needs-validation" method="post" novalidate>
+      <div class="form-row">
         <div class="form-floating mb-4">
-          <input type="text" class="form-control sPadingF" id="nombre" name="nombre" placeholder="nombre"
-            data-rule-required="true">
+          <input type="text" class="form-control sPadingF" id="nombre" name="nombre" placeholder="nombre" required>
           <label for="nombre" class="sPaddingI">Nombre *</label>
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
         </div>
+      </div>
+      <div class="form-row">
         <div class="form-floating mb-4">
-          <input type="text" class="form-control sPadingF" id="apellido" name="apellido" placeholder="apellido"
-            data-rule-required="true">
+          <input type="text" class="form-control sPadingF" id="apellido" name="apellido" placeholder="apellido" required>
           <label for="apellido" class="sPaddingI">Apellido *</label>
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
         </div>
-        <div class="row">
-          <div class="col pr-0">
-            <div class="form-floating mb-4">
-              <input type="text" class="form-control sPadingF" id="nroDocumento" name="nroDocumento"
-                placeholder="Documento" data-rule-required="true">
-              <label for="nroDocumento" class="sPaddingI">Documento *</label>
-            </div>
-          </div>
-
-          <div class="col pl-0">
-            <div class="form-floating mb-4">
-              <input type="text" class="form-control sPadingF" id="fechaNacimiento" name="fechaNacimiento"
-                placeholder="dd/mm/aaaa">
-              <label for="fechaNacimiento" class="sPaddingI sPaddingIFecha">Fecha de Nacimiento</label>
-            </div>
-          </div>
+      </div>
+      <div class="form-row">
+        <div class="col pr-0">
+           <div class="form-floating mb-4">
+            <input type="text" class="form-control sPadingF" id="nroDocumento" name="nroDocumento" placeholder="Documento" required>
+            <label for="nroDocumento" class="sPaddingI">Documento *</label>
+             <div class="valid-feedback"></div>
+            <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
+           </div>
         </div>
 
-        <select class="form-select mb-3" id="provincia" aria-label="Default select example">
+        <div class="col pl-0">
+          <div class="form-floating mb-4">
+            <input type="text" class="form-control sPadingF" id="fechaNacimiento" name="fechaNacimiento" placeholder="dd/mm/aaaa">
+            <label for="fechaNacimiento" class="sPaddingI sPaddingIFecha">Fecha de Nacimiento</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <select class="form-select mb-3" id="provincia" aria-label="Default select example" required>
           <option selected>Seleccione Provincia</option>
           <!--Muestra de datos. Las provincias se deben obtener de la base de datos-->
           <option value="1">Córdoba</option>
           <option value="2">La Rioja</option>
           <option value="3">Santa Fé</option>
         </select>
+        <div class="valid-feedback"></div>
+        <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
+      </div> 
 
-        <select class="form-select mb-3" id="ciudad" aria-label="Default select example">
+      <div class="form-row">
+        <select class="form-select mb-3" id="ciudad" aria-label="Default select example" required>
           <option selected>Seleccione Ciudad</option>
           <!--Muestra de datos. Las ciudades se deben obtener de la base de datos orden alfabético-->
           <option value="1">Córdoba</option>
           <option value="2">Río Cuarto</option>
           <option value="3">Va. Carlos Paz</option>
         </select>
+        <div class="valid-feedback"></div>
+        <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
+      </div>
 
+      <div class="form-row">
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="email" name="email" placeholder="email" data-rule-required="true"
-            data-rule-email="true">
+          <input type="email" class="form-control" id="email" name="email" placeholder="email" required>
           <label for="email" class="sPaddingI">Correo Electrónico *</label>
         </div>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control sPadingF" id="confirmarEmail" name="confirmarEmail"
-            placeholder="Confirmar Correo Electrónico" data-rule-required="true">
-          <label for="confirmarEmail" class="sPaddingI">Confirmar Correo Electrónico *</label>
-        </div>
+        <div class="valid-feedback"></div>
+        <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
+      </div> 
 
+      <div class="form-row">
         <div class="form-floating mb-3">
-          <input type="password" class="form-control sPadingF" id="password" name="password" placeholder="Contraseña"
-            data-rule-required="true" data-rule-minlength="8" data-rule-maxlength="8">
+          <input type="email" class="form-control" id="confirmarEmail" name="confirmarEmail" placeholder="Confirmar Correo Electrónico">
+          <label for="confirmarEmail" class="sPaddingI">Confirmar Correo Electrónico *</label>
+        <div class="invalid-feedback">Las correos electrónicos ingresados no coinciden.</div>
+      </div>
+    </div>
+
+      <div class="form-row">
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
           <label for="password" class="sPaddingI">Contraseña *</label>
-        </div>
+        <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
+      <div class="col">
+        <button class="btn btn-primary" type="button" onclick="verPassword()">Ver</button>
+      </div> 
+    </div>
+  </div>
+
+      <div class="form-row">
         <div class="form-floating mb-3">
-          <input type="password" class="form-control sPadingF" id="confirmarPassword" name="confirmarPassword"
-            placeholder="Confirmar contraseña" data-rule-required="true">
-          <label for="confirmarPassword" class="sPaddingI">Comfirmar Contraseña *</label>
+          <input type="password" class="form-control" id="confirmarPassword" name="confirmarPassword" placeholder="Confirmar contraseña">
+          <label for="confirmarPassword" class="sPaddingI">Confirmar Contraseña *</label>
+          <div class="invalid-feedback">Las contraseñas ingresadas no coinciden.</div>
+          <div class="col">
+            <button class="btn btn-primary" id="btn-pass" type="button" onclick="verPasswordConfirm()">Ver</button>
+          </div> 
         </div>
+      </div>
 
     </div>
     <div class="d-grid">
-      <button type="submit" id="btn-register" class="btn btn-register"
-        onclick="location.href='carga_datos.html'">Registrarme</button>
+      <button type="submit" id="btn-register" class="btn btn-register">Registrarme</button>
+      <!--onclick="location.href='carga_datos.html'"-->
     </div>
     </form>
   </div>
@@ -161,6 +192,10 @@
       Grupo-8 Programacion-Web-1 <a href="https://www.ispc.edu.ar/" target="blank">ISPC</a>❤
     </p>
   </footer>
+
+  <script src="js/validar_formulario.js"></script> 
+  <script src="js/password.js"></script>
+
 </body>
 
 </html>
