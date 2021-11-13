@@ -15,7 +15,10 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
+    </script>
+
+  //archivo con scripts del Grupo-8
+  <script src="js/funcionesGrupo8.js"></script>
 
   <title>Registrate</title>
   <meta name="keywords" content="Cordoba, Capital, Urbano, Formulario, Registro">
@@ -102,9 +105,17 @@
 
           <div class="col pl-0">
             <div class="form-floating mb-4">
-              <input type="text" class="form-control sPadingF" id="fechaNacimiento" name="fechaNacimiento"
-                placeholder="dd/mm/aaaa">
+              <input type="date" class="form-control sPadingF" onchange="CalcularEdad()" id="fechaNacimiento"
+                name="fechaNacimiento" placeholder="dd/mm/aaaa">
               <label for="fechaNacimiento" class="sPaddingI sPaddingIFecha">Fecha de Nacimiento</label>
+            </div>
+          </div>
+
+          <!-- para mostrar la edad calculada -->
+
+          <div class="col pl-0">
+            <div class="form-floating mb-4">
+              <input type="text" class="form-control sPadingF" id="EdadActual" value="Edad  " name="EdadActual">
             </div>
           </div>
         </div>
