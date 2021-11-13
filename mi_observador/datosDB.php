@@ -1,7 +1,7 @@
 <?php
 $host="localhost";
-$usuario="salvador";
-$clave="ispc2021";
+$usuario="root";
+$clave="mary1983";
 $basededatos="miobservador";
 
 $conn= new mysqli($host, $usuario, $clave, $basededatos);

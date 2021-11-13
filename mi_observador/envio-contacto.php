@@ -14,8 +14,8 @@
 
 $nombre= $_POST["nombre"];
 $apellido= $_POST["apellido"];
-$provincia= $_POST["provincia"];
-$ciudad = $_POST["ciudad"];
+//$provincia= $_POST["provincia"];
+$ciudad = $_POST["idCiudad"];
 $email = $_POST["email"];
 $password = $_POST["password"];
 
@@ -33,7 +33,8 @@ if (!$conn) {
 
 $db = mysqli_select_db($conn, $basededatos) or die ("Uhh! no se ha podido conectar a la Base De Datos");
 $consulta = "INSERT INTO cuenta (nombre, apellido, email, contrasenia, idCuentaOrigen, idCuentaEstado, idCiudad) VALUES ('$nombre','$apellido'
-,'$email','$password','$idCuentaOrigen','$idCuentaEstado','$idCiudad')";
+,'$email','$password',1, 1, $ciudad)";
+//$idCiudad '$idCuentaOrigen','$idCuentaEstado'
 
 if (mysqli_query ($conn, $consulta)) {
     echo "<p>Registro agregado.</p>";
