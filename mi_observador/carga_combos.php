@@ -7,7 +7,7 @@ if (!$conn) {
 }
 
 $datosDB = mysqli_select_db($conn, $basededatos) or die ("Uhh! no se ha podido conectar a la Base De Datos");
-$consulta = "SELECT c.nombreCiudad, c.idCiudad 
+$consulta = "SELECT * 
               FROM ciudad as c
               INNER JOIN provincia as p
               WHERE c.idProvincia = p.idProvincia
