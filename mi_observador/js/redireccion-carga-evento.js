@@ -1,8 +1,3 @@
-function redireccionEventos(){
-
-  setTimeout(function(){
-        location.href="carga_datos.html";
-    },2000);
-
-}
-    
+setTimeout(function(){
+  location.href="carga_datos.html";
+},8000);
