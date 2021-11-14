@@ -11,7 +11,7 @@ $consulta = "SELECT c.nombreCiudad, c.idCiudad
               FROM ciudad as c
               INNER JOIN provincia as p
               WHERE c.idProvincia = p.idProvincia
-              AND c.idProvincia = 31";
+              AND c.idProvincia = 81";
 
       $resultado = mysqli_query($conn , $consulta);
       $contador=0;
