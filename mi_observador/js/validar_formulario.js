@@ -21,7 +21,7 @@
   //Validación de que los password coincidan
   var password = document.getElementById("password")
   , confirm_password = document.getElementById("confirmarPassword");
-
+  //si los campos no coindiden muestra mensaje
   function validatePassword(){
   if(password.value != confirm_password.value) {
     confirm_password.setCustomValidity("Las contraseñas ingresadas no coinciden.");
@@ -33,7 +33,7 @@
     //Validación de que los emails coincidan
     var email = document.getElementById("email")
     , confirm_email = document.getElementById("confirmarEmail");
-  
+    //si los campos no coindiden muestra mensaje
     function validateEmail(){
     if(email.value != confirm_email.value) {
       confirm_email.setCustomValidity("Los correos electrónicos ingresados no coinciden.");
@@ -42,17 +42,20 @@
     }
   }
 
-  function verPassword(){
-    var tipo = document.getElementById("password");
-    if(tipo.type == "password"){
-        tipo.type = "text";
-    }else{
-        tipo.type = "password";
-    }
-}
+function verPassword(){
+  var cambio = document.getElementById("password");
+  //si la constraseña es tipo password pasar a texto con el check
+  if(cambio.type == "password"){
+    cambio.type = "text";
+  }else{
+    cambio.type = "password";
+  }
+};
+
 
 function verPasswordConfirm(){
   var tipo = document.getElementById("confirmarPassword");
+  //si la constraseña es tipo password pasar a texto con el check
   if(tipo.type == "confirmarPassword"){
       tipo.type = "text";
   }else{

@@ -12,6 +12,7 @@
 
 $nombre= $_POST ["nombre"];
 $email = $_POST["email"];
+$password = $_POST["password"]
 
 
 print " <p> Su nombre es  <strong>$nombre</strong>.</p>";
@@ -25,7 +26,7 @@ if (!$con) {
 }
 
 $db = mysqli_select_db($con, $basededatos) or die ("Uh! no se ha podido conectar a la bdd");
-$consulta = "SELECT FROM cuenta WHERE email = $email AND contrasenia = $password";
+$consulta = "SELECT * FROM cuenta WHERE email = $email AND contrasenia = $password";
 
 if (mysqli_query ($con, $consulta)) {
     echo "<p> Inicio de sesion erroneo. </p>"
@@ -40,6 +41,7 @@ mysqli_close($con);
 
 ?>
 
+<script src="js/redireccion-muestra-datos.js"></script>
 
 </body>
 </html>

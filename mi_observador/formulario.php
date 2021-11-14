@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<<head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="shortcut icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="stylesheet" href="css/formulario.css" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
 
-  <title>Registrate</title>
-  <meta name="keywords" content="Cordoba, Capital, Urbano, Formulario, Registro">
-  <meta name="description" content="Pagina registro, aqui el usuario se podra registrar si no tiene cuenta creada.">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+
+<title>Login</title>
+<meta name="keywords" content="Cordoba, Capital, Urbano, Logueado, Login, Usuarios">
+<meta name="description" content="Seccion login, si el usuario tiene ya una cuenta puede ingresar por esta pagina.">
 
 </head>
 
@@ -142,10 +144,9 @@
 
       <div class="form-row">
         <select class="form-select mb-3" name = "idCiudad" id="ciudad" aria-label="Default select example" required>
-          <?php print carga_combo(); ?>
-          
-          
-          </select>
+        <option selected>Seleccione Ciudad</option>
+        <?php print carga_combo();?>
+        </select>
         <div class="valid-feedback"></div>
         <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
       </div>
@@ -174,20 +175,19 @@
           <label for="password" class="sPaddingI">Contraseña *</label>
           <div class="valid-feedback"></div>
           <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
-      <div class="col">
-        <button class="btn btn-primary" type="button" onclick="verPassword()">Ver</button>
-      </div> 
-    </div>
-  </div>
-
+            <div class="input-group-text" onchange="verPassword()"> 
+              <input id="verPassword" type="checkbox" /> Ver contraseña
+            </div>
+      </div>
+  
       <div class="form-row">
         <div class="form-floating mb-3">
           <input type="password" class="form-control" id="confirmarPassword" name="confirmarPassword" placeholder="Confirmar contraseña">
           <label for="confirmarPassword" class="sPaddingI">Confirmar Contraseña *</label>
           <div class="invalid-feedback">Las contraseñas ingresadas no coinciden.</div>
-          <div class="col">
-            <button class="btn btn-primary" id="btn-pass" type="button" onclick="verPasswordConfirm()">Ver</button>
-          </div> 
+            <div class="input-group-text" onchange="verPasswordConfirm()"> 
+              <input id="verPassword" type="checkbox" /> Ver contraseña
+            </div> 
         </div>
       </div>
 
@@ -209,7 +209,10 @@
   <script src="js/validar_formulario.js"></script> 
   <script src="js/password.js"></script>
   <script src="js/funcionesGrupo8.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+  
 </body>
 
 </html>
