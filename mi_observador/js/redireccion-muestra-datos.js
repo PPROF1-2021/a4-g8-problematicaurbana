@@ -1,6 +1,6 @@
 setTimeout(function(){
     location.href="index.html";
-},7000);
+},8000);
     
 
 
