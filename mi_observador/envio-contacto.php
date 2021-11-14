@@ -23,7 +23,6 @@
 
 $nombre= $_POST["nombre"];
 $apellido= $_POST["apellido"];
-//$provincia= $_POST["provincia"];
 $ciudad = $_POST["idCiudad"];
 $email = $_POST["email"];
 $password = $_POST["password"];
