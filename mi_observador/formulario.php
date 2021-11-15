@@ -90,7 +90,7 @@
     <form id="registro" action="envio-contacto.php" class="needs-validation" method="post" novalidate>
       <div class="form-row">
         <div class="form-floating mb-4">
-          <input type="text" maxlenght="25" class="form-control sPadingF" id="nombre" name="nombre" placeholder="nombre" required
+        <input type="text" maxlength = "25" class="form-control sPadingF" id="apellido" name="apellido" placeholder="apellido" required
           oninput="campoNombre(this);">
           <label for="nombre" class="sPaddingI">Nombre *</label>
           <div class="valid-feedback"></div>
@@ -101,7 +101,7 @@
       <div class="form-row">
         <div class="form-floating mb-4">
           <input type="text" maxlength = "25" class="form-control sPadingF" id="apellido" name="apellido" placeholder="apellido" required
-          oninput="campoNombre(this);">
+          oninput="campoApellido(this);">
           <label for="apellido" class="sPaddingI">Apellido *</label>
           <div class="valid-feedback"></div>
           <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
@@ -211,7 +211,7 @@
     </p>
   </footer>
 
-  <script src="js/validar_formulario.js"></script> 
+  <!--script src="js/validar_formulario.js"></script--> 
   <script src="js/password.js"></script>
   <script src="js/funcionesGrupo8.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
