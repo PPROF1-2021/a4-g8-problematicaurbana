@@ -16,7 +16,7 @@ function CalcularEdad() {
 
   };
 
-  //validar cantidad de caracteres ingresados 
+//validar cantidad de caracteres ingresados 
 function campoDocumento (obj) {
   console.log(obj.value);
   if (obj.value.length > obj.maxLength) {
@@ -74,3 +74,52 @@ function campoNombre (obj) {
     confirm_password.setCustomValidity('');
   }
 }
+
+    //Validación de que los emails coincidan
+    var email = document.getElementById("email")
+    , confirm_email = document.getElementById("confirmarEmail");
+    //si los campos no coindiden muestra mensaje
+    function validateEmail(){
+    if(email.value != confirm_email.value) {
+      confirm_email.setCustomValidity("Los correos electrónicos ingresados no coinciden.");
+    } else {
+      confirm_email.setCustomValidity('');
+    }
+  }
+
+function verPassword(){
+  var cambio = document.getElementById("password");
+  //si la constraseña es tipo password pasar a texto con el check
+  if(cambio.type == "password"){
+    cambio.type = "text";
+  }else{
+    cambio.type = "password";
+  }
+};
+
+
+function verPasswordConfirm(){
+  var tipo = document.getElementById("confirmarPassword");
+  //si la constraseña es tipo password pasar a texto con el check
+  if(tipo.type == "confirmarPassword"){
+      tipo.type = "text";
+  }else{
+      tipo.type = "confirmarPassword";
+  }
+};
+
+function verPasswordLogin(){
+  var tipo = document.getElementById("password");
+  //si la constraseña es tipo password pasar a texto con el check
+  if(tipo.type == "password"){
+      tipo.type = "text";
+  }else{
+      tipo.type = "password";
+  }
+};
+  
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+    email.onchange = validateEmail;
+    confirm_email.onkeyup = validateEmail;
+
