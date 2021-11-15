@@ -90,15 +90,18 @@
     <form id="registro" action="envio-contacto.php" class="needs-validation" method="post" novalidate>
       <div class="form-row">
         <div class="form-floating mb-4">
-          <input type="text" class="form-control sPadingF" id="nombre" name="nombre" placeholder="nombre" required>
+          <input type="text" maxlenght="25" class="form-control sPadingF" id="nombre" name="nombre" placeholder="nombre" required
+          oninput="campoNombre(this);">
           <label for="nombre" class="sPaddingI">Nombre *</label>
           <div class="valid-feedback"></div>
           <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
         </div>
       </div>
       <div class="form-row">
+      <div class="form-row">
         <div class="form-floating mb-4">
-          <input type="text" class="form-control sPadingF" id="apellido" name="apellido" placeholder="apellido" required>
+          <input type="text" maxlength = "25" class="form-control sPadingF" id="apellido" name="apellido" placeholder="apellido" required
+          oninput="campoNombre(this);">
           <label for="apellido" class="sPaddingI">Apellido *</label>
           <div class="valid-feedback"></div>
           <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
@@ -107,7 +110,8 @@
       <div class="form-row">
         <div class="col pr-0">
            <div class="form-floating mb-4">
-            <input type="text" class="form-control sPadingF" id="nroDocumento" name="nroDocumento" placeholder="Documento" required>
+           <input type="number" maxlength="8" class="form-control sPadingF" id="nroDocumento" name="nroDocumento" placeholder="Documento" required
+            oninput="campoDocumento(this);">
             <label for="nroDocumento" class="sPaddingI">Documento *</label>
              <div class="valid-feedback"></div>
             <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
@@ -171,8 +175,9 @@
 
       <div class="form-row">
         <div class="form-floating mb-3">
-          <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
-          <label for="password" class="sPaddingI">Contraseña *</label>
+        <input type="password" maxlength="8" class="form-control" id="password" name="password" placeholder="Contraseña" required
+          oninput="campoPassword(this);">
+          <label for="password" class="sPaddingI">Contraseña * (8 caracteres)</label>
           <div class="valid-feedback"></div>
           <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
             <div class="input-group-text" onchange="verPassword()"> 
@@ -200,7 +205,7 @@
   </div>
   </form>
 
-  <footer class="footer container-fluid" id="footer">
+  <footer class="footer container-fluid mt-4" id="footer">
     <p class="texto-footer">❤ Todos los derechos reservados. Copyright&copy 2021
       Grupo-8 Programacion-Web-1 <a href="https://www.ispc.edu.ar/" target="blank">ISPC</a>❤
     </p>
