@@ -1,4 +1,31 @@
+//validar cantidad de caracteres ingresados 
+function campoDocumento (obj) {
+  console.log(obj.value);
+  if (obj.value.length > obj.maxLength) {
+      obj.value = obj.value.slice(0, obj.maxLength);
+  }
+};
 
+function campoPassword (obj) {
+console.log(obj.value);
+if (obj.value.length > obj.maxLength) {
+    obj.value = obj.value.slice(0, obj.maxLength);
+}
+};
+
+function camponNombre (obj) {
+  console.log(obj.value);
+  if (obj.value.length > obj.maxLength) {
+      obj.value = obj.value.slice(0, obj.maxLength);
+  }
+  };
+
+  function campoApellido (obj) {
+    console.log(obj.value);
+    if (obj.value.length > obj.maxLength) {
+        obj.value = obj.value.slice(0, obj.maxLength);
+    }
+    };
  
 //Validación de campos requeridos
 (function() {
@@ -60,6 +87,16 @@ function verPasswordConfirm(){
       tipo.type = "text";
   }else{
       tipo.type = "confirmarPassword";
+  }
+}
+
+function verPasswordLogin(){
+  var tipo = document.getElementById("password");
+  //si la constraseña es tipo password pasar a texto con el check
+  if(tipo.type == "password"){
+      tipo.type = "text";
+  }else{
+      tipo.type = "password";
   }
 }
   

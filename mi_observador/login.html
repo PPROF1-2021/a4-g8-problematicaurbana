@@ -94,7 +94,9 @@
         <div class="form-row">
           <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese contraseña"
             required>
-          <button class="btn btn-primary" type="button" onclick="verPassword()">Ver</button>
+            <div class="input-group-text" onchange="verPasswordLogin()"> 
+              <input id="verPasswordLogin" type="checkbox" /> Ver contraseña
+            </div>
           <div class="valid-feedback"></div>
           <div class="invalid-feedback">Dato requerido. Complete por favor.</div>
         </div>
@@ -109,7 +111,7 @@
 
       </div>
 
-      <!--Seccion de login con otra cuenta -->
+      <!--Seccion de login con otra cuenta 
       <div class="card" id="seccionOtraCuenta">
         <div class="card-header">
           <div class="container w-80 my-3">
@@ -143,6 +145,7 @@
             <p class="mt-3">o <a href="formulario.php">Crear una cuenta</a></p>
           </div>
         </div>
+        -->
 
       </div>
     </form>
@@ -150,7 +153,7 @@
   </div>
   </div>
 
-  <footer class="footer container-fluid" id="footer">
+  <footer class="footer container-fluid mt-4" id="footer">
     <p class="texto-footer">❤ Todos los derechos reservados. Copyright&copy 2021
       Grupo-8 Programacion-Web-1 <a href="https://www.ispc.edu.ar/" target="blank">ISPC</a>❤
     </p>
