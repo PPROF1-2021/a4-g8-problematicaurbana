@@ -90,7 +90,7 @@
     <form id="registro" action="envio-contacto.php" class="needs-validation" method="post" novalidate>
       <div class="form-row">
         <div class="form-floating mb-4">
-        <input type="text" maxlength = "25" class="form-control sPadingF" id="apellido" name="apellido" placeholder="apellido" required
+        <input type="text" maxlength = "25" class="form-control sPadingF" id="nombre" name="nombre" placeholder="nombre" required
           oninput="campoNombre(this);">
           <label for="nombre" class="sPaddingI">Nombre *</label>
           <div class="valid-feedback"></div>
