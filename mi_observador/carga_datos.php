@@ -30,6 +30,7 @@
 </head>
 
 <body>
+    <?php include("session.php"); ?>
     <header id="cabecera" class="header">
         <img src="images/logo.png" class="logo img-fluid" alt="Logo">
     </header>
@@ -54,7 +55,7 @@
                         <a class="nav-link" href="./Sobre_nosotros.html">Quienes Somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./carga_datos.html">Reportes</a>
+                        <a class="nav-link" href="./carga_datos.php">Reportes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./login.html">Login</a>
