@@ -26,7 +26,7 @@
 //post con los datos ingresados en la pagina de login
 if($_POST){
     $email = $_POST["email"];
-    $password = $_POST["password"];
+    $password = $_POST["passwordLogin"];
 //valida los datos en la DB
     $consulta = "SELECT idCuenta FROM cuenta WHERE email = '$email' AND contrasenia = '$password'";
     $query = $conn->query($consulta);
