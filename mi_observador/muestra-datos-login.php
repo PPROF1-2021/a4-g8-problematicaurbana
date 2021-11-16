@@ -17,46 +17,51 @@
     
 </head>
 <body>
-
+<?php include("session.php"); ?>
 <header id="cabecera" class="header">
     <img src="images/logo.png" class="logo img-fluid" alt="Logo">
   </header>
 
 <?php
+//post con los datos ingresados en la pagina de login
+if($_POST){
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+//valida los datos en la DB
+    $consulta = "SELECT idCuenta FROM cuenta WHERE email = '$email' AND contrasenia = '$password'";
+    $query = $conn->query($consulta);
+    $resultado = $query->fetch_row();
+  
+    //datos para session
+    if(!empty($resultado) && isset($resultado[0]) && $resultado[0]){
+        global $idCuenta, $cliente;
+        $idCuenta = $resultado[0];
+        $_SESSION['idCuenta'] = $resultado[0];
+        //obtener solo el nombre de la cuenta obtenida
+        $consulta = "SELECT nombre FROM cuenta WHERE idCuenta = $idCuenta";
+        $query = $conn->query($consulta);
+        $cliente = $query->fetch_array();
+    
+    }
 
-$email = $_POST["email"];
-$password = $_POST["password"];
+    
 
-
-print " <p> Bienvenido/a <strong>$email</strong> a MiObservador, en breve sera dirigido a la seccion Reportes .</p>";
-
-
-
-include("datosDB.php");
-$con = mysqli_connect($host, $usuario, $clave, $basededatos) or die ("No se ha podido conectar al servidor de la BDD");
-if (!$con) {
-    die("Conexion fallida: " . myslqli_connect_error());
+    mysqli_close($conn);
 }
+global $cliente, $idCuenta;
 
-$db = mysqli_select_db($con, $basededatos) or die ("Uh! no se ha podido conectar a la bdd");
-$consulta = "SELECT * FROM cuenta WHERE email = $email AND contrasenia = $password";
-
-/*
-if (mysqli_query ($con, $consulta)) {
-    echo "<p> Inicio de sesion erroneo. </p>";
-
+if($idCuenta){
+    $nombre = $cliente["nombre"];
+    print " <p> Bienvenido/a <strong>$nombre</strong> a MiObservador, en breve sera dirigido a la seccion Reportes .</p>";
 }
-else {
-    echo "<p> No se puedo iniciar sesion. </p>";
-    echo "Error: " . $consulta . "<br>" . mysqli_error($con);
-
-}
-*/
-mysqli_close($con);
-
 ?>
 
 <script src="js/redireccion-carga-evento.js"></script>
+
+      
+
+     
+
 
 </body>
 

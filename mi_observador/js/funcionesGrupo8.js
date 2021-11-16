@@ -101,15 +101,15 @@ function verPassword(){
 function verPasswordConfirm(){
   var tipo = document.getElementById("confirmarPassword");
   //si la constraseña es tipo password pasar a texto con el check
-  if(tipo.type == "confirmarPassword"){
+  if(tipo.type == "password"){
       tipo.type = "text";
   }else{
-      tipo.type = "confirmarPassword";
+      tipo.type = "password";
   }
 };
 
 function verPasswordLogin(){
-  var tipo = document.getElementById("password");
+  var tipo = document.getElementById("passwordLogin");
   //si la constraseña es tipo password pasar a texto con el check
   if(tipo.type == "password"){
       tipo.type = "text";
@@ -118,6 +118,9 @@ function verPasswordLogin(){
   }
 };
   
+
+
+
     password.onchange = validatePassword;
     confirm_password.onkeyup = validatePassword;
     email.onchange = validateEmail;

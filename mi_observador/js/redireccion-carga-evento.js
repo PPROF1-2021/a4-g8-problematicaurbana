@@ -1,3 +1,3 @@
 setTimeout(function(){
-  location.href="carga_datos.html";
+  location.href="carga_datos.php";
 },8000);

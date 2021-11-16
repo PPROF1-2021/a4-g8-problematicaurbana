@@ -56,7 +56,7 @@
             <a class="nav-link" href="./Sobre_nosotros.html">Quienes Somos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./carga_datos.html">Reportes</a>
+            <a class="nav-link" href="./carga_datos.php">Reportes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./login.html">Login</a>
@@ -90,7 +90,7 @@
     <form id="registro" action="envio-contacto.php" class="needs-validation" method="post" novalidate>
       <div class="form-row">
         <div class="form-floating mb-4">
-        <input type="text" maxlength = "25" class="form-control sPadingF" id="nombre" name="nombre" placeholder="nombre" required
+        <input type="text" maxlength = "25" minlenght = "2" class="form-control sPadingF" id="nombre" name="nombre" placeholder="nombre" required
           oninput="campoNombre(this);">
           <label for="nombre" class="sPaddingI">Nombre *</label>
           <div class="valid-feedback"></div>

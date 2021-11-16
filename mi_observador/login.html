@@ -49,7 +49,7 @@
             <a class="nav-link" href="./Sobre_nosotros.html">Quienes Somos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./carga_datos.html">Reportes</a>
+            <a class="nav-link" href="./carga_datos.php">Reportes</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./login.html">Login</a>
@@ -92,7 +92,7 @@
       <div class="form-outline mb-4">
         <h6>Contraseña *</h6>
         <div class="form-row">
-          <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese contraseña"
+          <input type="password" class="form-control" id="passwordLogin" name="passwordLogin" placeholder="Ingrese contraseña"
             required>
             <div class="input-group-text" onchange="verPasswordLogin()"> 
               <input id="verPasswordLogin" type="checkbox" /> Ver contraseña
@@ -106,12 +106,15 @@
       </div>
 
       <div class="d-grid">
-        <button type="submit" id="btn-login" class="btn btn-login" onclick="redireccionEventos()">Iniciar
+        <button type="submit" id="btn-login" class="btn btn-login" >Iniciar
           sesión</button>
 
       </div>
 
-      <!--Seccion de login con otra cuenta 
+      <!--
+        onclick="redireccionEventos()"
+
+        Seccion de login con otra cuenta 
       <div class="card" id="seccionOtraCuenta">
         <div class="card-header">
           <div class="container w-80 my-3">
@@ -158,8 +161,9 @@
       Grupo-8 Programacion-Web-1 <a href="https://www.ispc.edu.ar/" target="blank">ISPC</a>❤
     </p>
   </footer>
-  <script src="js/redireccion-carga-evento.js"></script>
+  
   <script src="js/validar_formulario.js"></script>
+  <script src="js/funcionesGrupo8.js"></script>
 
 </body>
 
