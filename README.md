@@ -15,8 +15,6 @@ Grupo 8:
 
 - Duarte, Paul
 
-- Laredo, Fernando
-
 - Romero, Marysel
 
 - Zalazar, Juan Manuel
@@ -24,4 +22,4 @@ Grupo 8:
 
 Enlace a página web del Proyecto: 
 
-http://cuidandocordoba.mywebcommunity.org/index.html
+http://ourcraft.com.ar/mi_observador/
