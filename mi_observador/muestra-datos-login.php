@@ -11,25 +11,41 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
-    
+  <!--  <script src="js/redireccion-carga-evento.js"></script>-->
+<!--   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/funcionesGrupo8.js"></script>
+    <!--Enlace al js-->
+    <script src="js/alertas_login.js"></script>
+
+
+
 </head>
 <body>
+
+
 <?php include("session.php"); ?>
 <header id="cabecera" class="header">
     <img src="images/logo.png" class="logo img-fluid" alt="Logo">
   </header>
 
 <?php
+    $Ok= NULL;
+    $email = NULL;
+    $password = NULL;
+    $idCuenta = NULL;
+    $cliente = NULL;
 //post con los datos ingresados en la pagina de login
 if($_POST){
+    
     $email = $_POST["email"];
     $password = $_POST["passwordLogin"];
+    
 //valida los datos en la DB
     $consulta = "SELECT idCuenta FROM cuenta WHERE email = '$email' AND contrasenia = '$password'";
+    
     $query = $conn->query($consulta);
+    
     $resultado = $query->fetch_row();
   
     //datos para session
@@ -44,24 +60,41 @@ if($_POST){
     
     }
 
-    
-
     mysqli_close($conn);
 }
 global $cliente, $idCuenta;
 
-if($idCuenta){
+if($idCuenta != ''){
+  
     $nombre = $cliente["nombre"];
-    print " <p> Bienvenido/a <strong>$nombre</strong> a MiObservador, en breve sera dirigido a la seccion Reportes .</p>";
+    
+  echo '<script>
+          Swal.fire({
+           icon: "success",
+           title: "¡Genial!",
+          text: "¡Bienvenido/a a MiObservador! En breve será dirigido a la seccion Reportes",
+          showConfirmButton: false,  
+          });
+        </script>';
+   
+    header("Refresh: 5; URL=carga_datos.php");
+        
+}else {  
+  
+echo '<script>
+        Swal.fire({
+         icon: "error",
+         title: "Ups...",
+         text: "¡Usuario y/o contraseña no coinciden! Intentelo nuevamente, ¡gracias!",
+         showConfirmButton: false,  
+         });
+        </script>';
+
+  header("Refresh: 5; URL=login.html");
+  
 }
+
 ?>
-
-<script src="js/redireccion-carga-evento.js"></script>
-
-      
-
-     
-
 
 </body>
 
